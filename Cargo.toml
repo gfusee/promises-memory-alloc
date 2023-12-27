@@ -1,0 +1,25 @@
+[package]
+name = "empty"
+version = "0.0.0"
+authors = ["you"]
+edition = "2021"
+publish = false
+
+[lib]
+path = "src/empty.rs"
+
+[dependencies.multiversx-sc]
+version = "0.45.2"
+features = ["promises"]
+
+[dev-dependencies]
+num-bigint = "0.4.2"
+
+[dev-dependencies.multiversx-sc-scenario]
+version = "0.45.2"
+
+[workspace]
+members = [
+    ".",
+    "meta",
+]
